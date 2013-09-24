@@ -283,7 +283,7 @@ class UploadBehavior extends ModelBehavior {
 		return true;
 	}
 
-	public function afterSave(Model $model, $created) {
+	public function afterSave(Model $model, $created, $options = array()) {
 		$temp = array($model->alias => array());
 
 		foreach ($this->settings[$model->alias] as $field => $options) {
